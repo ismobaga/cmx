@@ -1,0 +1,44 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# --- Node / JS package ---
+node_modules/
+js/dist/
+*.tgz
+
+# --- data: re-downloadable with `python -m cmx_lid.build` ---
+data/raw/
+data/silver/
+*.part
+
+# --- models: training outputs (the shipped copies live in cmx_lid/resources/ and js/model/) ---
+models/*
+!models/report.json
+
+# --- demo site build output ---
+site-dist/
+
+# --- secrets & local env ---
+.env
+.env.*
+*.pem
+.pypirc
+.npmrc
+
+# --- OS / editors / tools ---
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.log
+Claude outputs/

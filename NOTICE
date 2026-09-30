@@ -1,0 +1,25 @@
+cmx-lid
+Copyright 2026 Crommix Mali S.A.
+
+LICENSING
+- Source code (Python package cmx_lid/, JavaScript package js/src/, the demo
+  site site/, deploy/ and tests/) is licensed under the Apache License 2.0
+  (see LICENSE).
+- The trained model and linguistic data files are licensed under Creative
+  Commons Attribution-ShareAlike 4.0 International (see LICENSE-MODEL.txt),
+  because they are derived from CC BY-SA 4.0 sources listed below:
+    cmx_lid/resources/*.json, cmx_lid/resources/*.tsv
+    js/model/cmx-lid.json
+    models/, data/lexicon.tsv, data/loanword_origin.tsv, data/seed/
+  If you redistribute these files or models derived from them, credit the
+  sources below and share your version under the same license.
+
+ATTRIBUTION: data used to build the model
+- BAYƐLƐMABAGA, RobotsMali: Bambara-French parallel corpus (from the Corpus
+  Bambara de Référence). CC BY-SA 4.0. https://github.com/RobotsMali-AI/datasets
+- Kunkado, RobotsMali: transcribed Malian radio with marked French
+  code-switching. CC BY-SA 4.0. https://huggingface.co/datasets/RobotsMali/kunkado
+- bambara-mt-dataset, Djelia: Bambara-French/English sentence pairs.
+  CC BY-SA 4.0. https://huggingface.co/datasets/djelia/bambara-mt-dataset
+- FrequencyWords, Hermit Dave: English word frequencies. MIT.
+  https://github.com/hermitdave/FrequencyWords

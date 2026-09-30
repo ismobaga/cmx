@@ -1,0 +1,9 @@
+{
+  "built": "2026-09-29 21:19",
+  "training_data": [
+    "/sessions/rcw-01gryqaxzepkmjfu43hmvqsw/mnt/cmx-lid/data/silver/wl-bayelemabaga.tsv",
+    "/sessions/rcw-01gryqaxzepkmjfu43hmvqsw/mnt/cmx-lid/data/silver/wl-en-top10k.tsv",
+    "/sessions/rcw-01gryqaxzepkmjfu43hmvqsw/mnt/cmx-lid/data/silver/wl-djelia.tsv",
+    "/sessions/rcw-01gryqaxzepkmjfu43hmvqsw/mnt/cmx-lid/data/silver/kunkado-train.conll"
+  ]
+}

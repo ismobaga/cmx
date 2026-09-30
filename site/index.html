@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crommix AI — Modèles pour le bambara</title>
+  <meta name="description" content="Modèles d'IA pour le bambara, qui tournent dans votre navigateur. Crommix Mali.">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/base.css">
+  <style>
+    .hero { padding: 12px 0 28px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+    .model { display: flex; flex-direction: column; gap: 10px; text-decoration: none; min-height: 190px; }
+    a.model:hover { border-color: var(--text-3); }
+    .model-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+    .model .mod { font-family: var(--mono); font-size: 12px; color: var(--text-3); }
+    .model h2 { margin: 0; font-size: 19px; }
+    .model p { margin: 0; color: var(--text-2); font-size: 15px; flex: 1; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tag { font-size: 12px; color: var(--text-3); background: var(--surface-2); border-radius: 6px; padding: 2px 8px; }
+    .model.soon { opacity: 0.72; }
+    .badge.soon .dot { background: var(--text-3); }
+    .go { font-weight: 600; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/"><span class="brand-mark">cx</span> Crommix AI <small data-i18n="brand.sub">Laboratoire IA</small></a>
+      <nav class="header-nav">
+        <div class="lang-toggle" role="group" aria-label="Langue / Language">
+          <button type="button" data-set-lang="fr">FR</button><button type="button" data-set-lang="en">EN</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <section class="hero">
+        <span class="badge"><span class="dot"></span><span data-i18n="hub.badge">Dans votre navigateur, hors ligne après chargement</span></span>
+        <h1 style="margin-top:14px" data-i18n="hub.title">Des modèles d'IA pour le bambara</h1>
+        <p class="lede" data-i18n="hub.lede">Petits modèles conçus pour tourner sur l'appareil, sans serveur ni envoi de données. Essayez-les ici.</p>
+      </section>
+      <section class="grid" id="models" aria-live="polite"></section>
+      <noscript><p class="muted">JavaScript est nécessaire pour les démos. / JavaScript is required for the demos.</p></noscript>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span data-i18n="footer.copy">© Crommix Mali S.A. — Bamako</span>
+      <span data-i18n="footer.private">Les modèles tournent dans votre navigateur : aucun texte n'est envoyé.</span>
+    </div>
+  </footer>
+
+  <script type="module" src="/assets/hub.js"></script>
+</body>
+</html>

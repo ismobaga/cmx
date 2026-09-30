@@ -1,0 +1,47 @@
+[
+  {
+    "id": "lid",
+    "path": "/lid/",
+    "status": "live",
+    "module": "cmx-lid",
+    "name": { "fr": "Identification de langue", "en": "Language identification" },
+    "desc": {
+      "fr": "Repère, mot par mot, le bambara, le français et l'anglais dans un même message, y compris les mélanges.",
+      "en": "Finds Bambara, French and English word by word in the same message, including mixes."
+    },
+    "tags": ["bambara", "français", "english", "code-switching"]
+  },
+  {
+    "id": "asr",
+    "status": "soon",
+    "module": "cmx-asr",
+    "name": { "fr": "Reconnaissance vocale", "en": "Speech recognition" },
+    "desc": {
+      "fr": "Transcrire la parole en bambara, directement sur l'appareil.",
+      "en": "Transcribe spoken Bambara, directly on the device."
+    },
+    "tags": ["bambara", "audio"]
+  },
+  {
+    "id": "tts",
+    "status": "soon",
+    "module": "cmx-tts",
+    "name": { "fr": "Synthèse vocale", "en": "Text to speech" },
+    "desc": {
+      "fr": "Faire lire un texte bambara à voix haute.",
+      "en": "Read Bambara text aloud."
+    },
+    "tags": ["bambara", "audio"]
+  },
+  {
+    "id": "mt",
+    "status": "soon",
+    "module": "cmx-mt",
+    "name": { "fr": "Traduction", "en": "Translation" },
+    "desc": {
+      "fr": "Traduire entre le bambara et le français.",
+      "en": "Translate between Bambara and French."
+    },
+    "tags": ["bambara", "français"]
+  }
+]

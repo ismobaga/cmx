@@ -1,0 +1,54 @@
+{
+  "name": "@crommix/lid",
+  "version": "0.5.0",
+  "description": "Word-level language identification for Bambara with French/English code-switching. Zero dependencies, Node and browsers, offline.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./model.json": "./model/cmx-lid.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist/*.js",
+    "dist/*.d.ts",
+    "model/cmx-lid.json",
+    "README.md",
+    "LICENSE",
+    "LICENSE-MODEL.txt",
+    "NOTICE"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepare": "npm run build",
+    "test": "npm run build && node --test \"test/*.test.mjs\"",
+    "prepublishOnly": "npm test"
+  },
+  "keywords": [
+    "bambara",
+    "bamanankan",
+    "language-identification",
+    "code-switching",
+    "mali",
+    "nlp",
+    "on-device",
+    "offline"
+  ],
+  "homepage": "https://ai.crommixmali.com/lid/",
+  "author": "Crommix Mali S.A.",
+  "license": "Apache-2.0 AND CC-BY-SA-4.0",
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0"
+  }
+}

@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cmx-lid"
+version = "0.5.0"
+description = "Word-level language identification for Bambara with French and English code-switching (Crommix)"
+readme = "README.pypi.md"
+requires-python = ">=3.10"
+dependencies = []
+license = "Apache-2.0 AND CC-BY-SA-4.0"
+license-files = ["LICENSE", "LICENSE-MODEL.txt", "NOTICE"]
+authors = [{ name = "Crommix Mali S.A." }]
+keywords = ["bambara", "bamanankan", "language-identification", "code-switching", "mali", "nlp", "on-device"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "Natural Language :: French",
+  "Natural Language :: English",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Text Processing :: Linguistic",
+]
+
+[project.optional-dependencies]
+fasttext = ["fasttext-wheel>=0.9.2"]
+ingest = ["pyarrow>=14"]
+
+[project.urls]
+Homepage = "https://ai.crommixmali.com/lid/"
+Documentation = "https://ai.crommixmali.com/lid/"
+
+[project.scripts]
+cmx-lid = "cmx_lid.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["cmx_lid", "cmx_lid.*"]
+
+[tool.setuptools.package-data]
+cmx_lid = ["resources/*.json", "resources/*.tsv"]

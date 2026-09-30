@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Identification de langue — bambara, français, anglais · Crommix AI</title>
+  <meta name="description" content="Repérez mot par mot le bambara, le français et l'anglais dans un texte. Tourne dans votre navigateur.">
+  <meta property="og:title" content="cmx-lid — Identification de langue bambara · français · anglais">
+  <meta property="og:description" content="Collez un message : chaque mot est coloré selon sa langue. Rien n'est envoyé, tout tourne dans le navigateur.">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/base.css">
+  <link rel="stylesheet" href="/lid/lid.css">
+  <link rel="preload" href="/vendor/cmx-lid/model/cmx-lid.json" as="fetch" type="application/json" crossorigin>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/"><span class="brand-mark">cx</span> Crommix AI <small data-i18n="brand.sub">Laboratoire IA</small></a>
+      <nav class="header-nav">
+        <a class="nav-link" href="/" data-i18n="nav.models">Modèles</a>
+        <div class="lang-toggle" role="group" aria-label="Langue / Language">
+          <button type="button" data-set-lang="fr">FR</button><button type="button" data-set-lang="en">EN</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <div class="page-head">
+        <div>
+          <a class="crumb" href="/">cmx-lid</a>
+          <h1 data-i18n="lid.title">Quelle langue, mot par mot ?</h1>
+          <p class="lede" data-i18n="lid.lede">Écrivez ou collez un message en bambara, français ou anglais — même mélangés. Chaque mot est coloré selon sa langue.</p>
+        </div>
+        <span class="badge"><span class="dot"></span><span data-i18n="lid.private">Tout reste dans votre navigateur</span></span>
+      </div>
+
+      <div class="layout">
+        <section class="card input-card" aria-labelledby="in-label">
+          <label id="in-label" for="text" class="small muted" data-i18n="lid.input">Votre texte</label>
+          <textarea id="text" spellcheck="false" autocomplete="off" data-i18n-placeholder="lid.placeholder" disabled></textarea>
+          <div class="input-row">
+            <div class="status" id="status" role="status"><span class="spinner"></span><span data-i18n="lid.loading">Chargement du modèle…</span></div>
+            <div class="actions">
+              <button class="btn" id="share" type="button" data-i18n="lid.share" disabled>Partager</button>
+              <button class="btn" id="clear" type="button" data-i18n="lid.clear" disabled>Effacer</button>
+            </div>
+          </div>
+          <div class="examples" id="examples"><span class="label" data-i18n="lid.examples">Exemples :</span></div>
+        </section>
+
+        <section class="card" id="results" aria-live="polite" hidden>
+          <div class="tiles">
+            <div class="tile"><div class="k" data-i18n="lid.main">Langue principale</div><div class="v" id="t-main">—</div><div class="s" id="t-main-s"></div></div>
+            <div class="tile"><div class="k" data-i18n="lid.mixed">Mélange</div><div class="v" id="t-mix">—</div><div class="s" id="t-mix-s"></div></div>
+            <div class="tile"><div class="k" data-i18n="lid.words">Mots</div><div class="v" id="t-words">0</div><div class="s" id="t-words-s"></div></div>
+          </div>
+          <div class="bar" id="bar" role="img"></div>
+          <div class="bar-labels" id="bar-labels"></div>
+
+          <div class="section-title">
+            <h2 data-i18n="lid.byword">Mot par mot</h2>
+            <label class="switch"><input type="checkbox" id="show-labels"> <span data-i18n="lid.showlabels">Afficher les étiquettes</span></label>
+          </div>
+          <div class="hl" id="hl"></div>
+          <div class="legend" id="legend">
+            <span><i class="sw sw-bam"></i> <span data-i18n="lang.bam">Bambara</span></span>
+            <span><i class="sw sw-fra"></i> <span data-i18n="lang.fra">Français</span></span>
+            <span><i class="sw sw-eng"></i> <span data-i18n="lang.eng">Anglais</span></span>
+            <span><i class="hatch"></i> <span data-i18n="lid.uncertain">hachuré = incertain (&lt; 70 %)</span></span>
+          </div>
+
+          <details class="words">
+            <summary data-i18n="lid.table">Détails (tableau)</summary>
+            <div class="actions" style="margin-top:10px">
+              <button class="btn" id="copy-json" type="button" data-i18n="lid.copyjson">Copier le JSON</button>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead><tr>
+                  <th>#</th><th data-i18n="lid.col.word">Mot</th><th data-i18n="lid.col.lang">Langue</th>
+                  <th data-i18n="lid.col.conf">Confiance</th><th data-i18n="lid.col.source">Décidé par</th>
+                </tr></thead>
+                <tbody id="tbody"></tbody>
+              </table>
+            </div>
+          </details>
+        </section>
+
+        <section class="about">
+          <div class="card">
+            <h2 data-i18n="about.how">Comment ça marche</h2>
+            <div data-lang-only="fr">
+              <p>Chaque mot passe par quatre étapes, de la plus sûre à la plus statistique :</p>
+              <ul>
+                <li><b>Règles</b> — les lettres ɛ, ɔ, ɲ, ŋ signalent le bambara ; les accents é, ô, ç et l'élision (<i>l'</i>, <i>d'</i>) signalent le français.</li>
+                <li><b>Lexique</b> — une liste de mots vérifiés, dont les mots courts ambigus (<i>la</i>, <i>de</i>, <i>a</i>).</li>
+                <li><b>Modèle statistique</b> — reconnaît les mots inconnus à leurs suites de lettres, y compris l'écriture informelle (<i>be</i>, <i>dougou</i>, <i>tche</i>).</li>
+                <li><b>Contexte</b> — les mots voisins départagent les cas douteux et les noms propres.</li>
+              </ul>
+              <p><b>Les emprunts intégrés comptent comme du bambara :</b> <i>inchallah</i>, <i>lekɔli</i>, <i>lopitali</i>. Un mot écrit à la française (<i>l'hôpital</i>) compte comme du français.</p>
+            </div>
+            <div data-lang-only="en" hidden>
+              <p>Each word goes through four steps, from most certain to most statistical:</p>
+              <ul>
+                <li><b>Rules</b>: the letters ɛ, ɔ, ɲ, ŋ mean Bambara; accents like é, ô, ç and elision (<i>l'</i>, <i>d'</i>) mean French.</li>
+                <li><b>Lexicon</b>: a list of checked words, including short ambiguous ones (<i>la</i>, <i>de</i>, <i>a</i>).</li>
+                <li><b>Statistical model</b>: recognises unknown words from their letter patterns, including informal spelling (<i>be</i>, <i>dougou</i>, <i>tche</i>).</li>
+                <li><b>Context</b>: neighbouring words settle doubtful cases and names.</li>
+              </ul>
+              <p><b>Integrated loanwords count as Bambara:</b> <i>inchallah</i>, <i>lekɔli</i>, <i>lopitali</i>. A word written the French way (<i>l'hôpital</i>) counts as French.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <h2 data-i18n="about.quality">Qualité mesurée</h2>
+            <div class="metrics">
+              <span data-i18n="about.m1">Radio malienne (Kunkado) — mots bien classés</span><span class="n" data-pct="0.973">97,3 %</span>
+              <span data-i18n="about.m2">… mots français repérés dans du bambara (F1)</span><span class="n" data-dec="0.79">0,79</span>
+              <span data-i18n="about.m3">Textes bambara/français (BAYƐLƐMABAGA) — exactitude</span><span class="n" data-pct="0.977">97,7 %</span>
+              <span data-i18n="about.m4">Bambara en écriture informelle</span><span class="n" data-pct="0.983">98,3 %</span>
+            </div>
+            <p class="small" data-i18n="about.limits">Limites : les petits mots français isolés (la, de, donc) au milieu du bambara sont parfois manqués ; les messages WhatsApp/SMS n'ont pas encore de jeu de test.</p>
+          </div>
+
+          <div class="card">
+            <h2 data-i18n="about.dev">Pour les développeurs</h2>
+            <p class="small" data-i18n="about.devtext">Même modèle en JavaScript/TypeScript et en Python, sans dépendance. Environ 2 Mo (410 Ko compressé), puis tout fonctionne hors ligne.</p>
+<pre class="snippet">import { load } from "@crommix/lid";
+const lid = await load();
+lid.tag("n taara l'hôpital kunun");
+lid.detect("je suis fatigué"); // "fra"</pre>
+<pre class="snippet">import cmx_lid
+cmx_lid.tag("n taara l'hôpital kunun")</pre>
+            <p class="small muted" id="version"></p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span data-i18n="footer.copy">© Crommix Mali S.A. — Bamako</span>
+      <span data-i18n="footer.private">Les modèles tournent dans votre navigateur : aucun texte n'est envoyé.</span>
+    </div>
+  </footer>
+
+  <div class="tip" id="tip" hidden></div>
+  <script type="module" src="/lid/app.js"></script>
+</body>
+</html>

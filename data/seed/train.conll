@@ -1,0 +1,241 @@
+# PLACEHOLDER SEED DATA - hand-written examples to exercise the pipeline.
+# Not a corpus: small, unreviewed, possibly unidiomatic. Replace with real
+# annotated sentences (WhatsApp / radio transcripts / social media) before
+# trusting any metric. Format: token<TAB>label, blank line between sentences.
+# Labels by USAGE: nativized loans = bam; French spelling / elision = fra.
+
+n	bam
+taara	bam
+sugu	bam
+la	bam
+kunun	bam
+.	univ
+
+a	bam
+bɛ	bam
+baara	bam
+kɛ	bam
+sisan	bam
+
+ne	bam
+tɔgɔ	bam
+ye	bam
+Ismail	bam
+ye	bam
+
+i	bam
+ka	bam
+kɛnɛ	bam
+wa	bam
+?	univ
+
+tɔɔrɔ	bam
+si	bam
+t'	bam
+a	bam
+la	bam
+
+an	bam
+bɛ	bam
+taa	bam
+so	bam
+
+muso	bam
+bɛ	bam
+dumuni	bam
+tobi	bam
+
+Ala	bam
+ka	bam
+an	bam
+kisi	bam
+
+inchallah	bam
+,	univ
+n	bam
+bɛ	bam
+na	bam
+sini	bam
+
+n	bam
+ma	bam
+se	bam
+ka	bam
+na	bam
+bi	bam
+
+denmisɛnw	bam
+bɛ	bam
+lekɔli	bam
+la	bam
+
+karamɔgɔ	bam
+ye	bam
+kalan	bam
+kɛ	bam
+
+a	bam
+ko	bam
+n	bam
+ma	bam
+ko	bam
+a	bam
+bɛ	bam
+na	bam
+
+n	bam
+taara	bam
+l'	fra
+hôpital	fra
+kunun	bam
+
+réunion	fra
+bɛ	bam
+kɛ	bam
+demain	fra
+
+c'	fra
+est	fra
+pas	fra
+possible	fra
+,	univ
+n	bam
+ma	bam
+se	bam
+
+i	bam
+ka	bam
+kɛnɛ	bam
+?	univ
+ça	fra
+va	fra
+bien	fra
+merci	fra
+
+n	bam
+bɛ	bam
+download	eng
+kɛ	bam
+sisan	bam
+
+meeting	eng
+in	bam
+bɛ	bam
+kɛ	bam
+tomorrow	eng
+
+al-hamdoulillah	bam
+,	univ
+an	bam
+bɛɛ	bam
+ka	bam
+kɛnɛ	bam
+
+mobili	bam
+bɛ	bam
+so	bam
+kɔ	bam
+
+a	bam
+bila	bam
+taabali	bam
+kan	bam
+
+je	fra
+suis	fra
+fatigué	fra
+aujourd'hui	fra
+
+on	fra
+va	fra
+se	fra
+voir	fra
+demain	fra
+
+the	eng
+meeting	eng
+is	eng
+tomorrow	eng
+
+I	eng
+will	eng
+download	eng
+it	eng
+
+bismillah	bam
+,	univ
+an	bam
+ka	bam
+dumuni	bam
+kɛ	bam
+
+barika	bam
+Ala	bam
+ye	bam
+
+wari	bam
+tɛ	bam
+n	bam
+bolo	bam
+
+n	bam
+bè	bam
+taa	bam
+sugu	bam
+la	bam
+
+a	bam
+bè	bam
+baara	bam
+la	bam
+
+n	bam
+taara	bam
+lopitali	bam
+la	bam
+
+a	bam
+ye	bam
+sukaro	bam
+don	bam
+ji	bam
+la	bam
+
+polisi	bam
+nana	bam
+
+il	fra
+faut	fra
+aller	fra
+à	fra
+l'	fra
+école	fra
+
+sisan	bam
+,	univ
+ça	fra
+ne	fra
+marche	fra
+pas	fra
+
+tomorrow	eng
+n	bam
+bɛ	bam
+na	bam
+
+hɛrɛ	bam
+sira	bam
+
+a	bam
+ye	bam
+kitabu	bam
+kalan	bam
+
+juma	bam
+don	bam
+,	univ
+an	bam
+bɛ	bam
+taa	bam
+misiri	bam
+la	bam

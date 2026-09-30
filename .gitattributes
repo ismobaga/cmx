@@ -1,0 +1,5 @@
+# LF everywhere: nginx.conf, Dockerfile and shell snippets must not get CRLF on Windows.
+* text=auto eol=lf
+*.png binary
+*.whl binary
+*.ftz binary

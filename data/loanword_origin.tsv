@@ -1,0 +1,29 @@
+# Loanword ORIGIN side table: metadata only, NEVER fed to the classifier.
+# Every form here must be labeled `bam` in lexicon.tsv (tagged by usage).
+# PLACEHOLDER SEED: etymologies are common-knowledge guesses. Verify before relying on them.
+form	origin_lang	source_form	gloss	notes
+inchallah	ara	إن شاء الله	if God wills	
+insha'allah	ara	إن شاء الله	if God wills	spelling variant
+al-hamdoulillah	ara	الحمد لله	praise be to God	French-influenced spelling
+alhamdulillah	ara	الحمد لله	praise be to God	
+bismillah	ara	بسم الله	in the name of God	
+barika	ara	بركة	blessing; strength; thanks	
+ala	ara	الله	God	
+seli	ara	صلاة	prayer; religious feast	
+kitabu	ara	كتاب	book	
+wakati	ara	وقت	time	
+dunuya	ara	دنيا	world	
+hakili	ara	عقل	mind, intelligence	
+alamisa	ara	الخميس	Thursday	
+tarata	ara	الثلاثاء	Tuesday	
+juma	ara	الجمعة	Friday	
+lekɔli	fra	l'école	school	
+lekoli	fra	l'école	school	spelling without ɔ
+mobili	fra	automobile	car	
+taabali	fra	table	table	
+lopital	fra	l'hôpital	hospital	
+lopitali	fra	l'hôpital	hospital	
+opital	fra	hôpital	hospital	
+sukaro	fra	sucre	sugar	
+biro	fra	bureau	office	
+polisi	fra	police	police	

@@ -1,0 +1,79 @@
+# PLACEHOLDER SEED DATA - hand-written examples to exercise the pipeline.
+# Not a corpus: small, unreviewed, possibly unidiomatic. Replace with real
+# annotated sentences (WhatsApp / radio transcripts / social media) before
+# trusting any metric. Format: token<TAB>label, blank line between sentences.
+# Labels by USAGE: nativized loans = bam; French spelling / elision = fra.
+
+n	bam
+taara	bam
+opital	bam
+la	bam
+
+a	bam
+bɛ	bam
+taa	bam
+lekɔli	bam
+la	bam
+sini	bam
+
+n	bam
+taara	bam
+l'	fra
+hôpital	fra
+
+inchallah	bam
+a	bam
+bɛna	bam
+kɛnɛya	bam
+
+c'	fra
+est	fra
+vrai	fra
+,	univ
+a	bam
+ko	bam
+ten	bam
+
+i	bam
+bè	bam
+taa	bam
+min	bam
+?	univ
+
+the	eng
+car	eng
+is	eng
+broken	eng
+,	univ
+mobili	bam
+tiɲɛna	bam
+
+wakati	bam
+tɛ	bam
+n	bam
+fɛ	bam
+
+je	fra
+vais	fra
+au	fra
+marché	fra
+,	univ
+n	bam
+bɛ	bam
+na	bam
+
+barika	bam
+,	univ
+merci	fra
+beaucoup	fra
+
+an	bam
+bɛ	bam
+download	eng
+kɛ	bam
+bi	bam
+
+il	fra
+est	fra
+parti	fra
+kunun	bam

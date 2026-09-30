@@ -1,0 +1,15 @@
+.git
+**/node_modules
+**/__pycache__
+data/raw
+data/silver
+models
+site-dist
+*.egg-info
+js/test
+.env
+.env.*
+*.pem
+Claude outputs
+dist
+build

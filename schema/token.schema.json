@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://crommixmali.com/schemas/cmx-lid/token/2.0.0",
+  "title": "cmx-lid token (FROZEN v2.0.0)",
+  "description": "One labeled token. Labels are by usage: nativized loanwords are bam; Arabic script is univ (ara dropped in 2.0.0). Loanword origin is NOT part of this schema. Fingerprint: d19b84b1ee075c10",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "text",
+    "start",
+    "end",
+    "label",
+    "confidence",
+    "source"
+  ],
+  "properties": {
+    "text": {
+      "type": "string"
+    },
+    "start": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "end": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "label": {
+      "enum": [
+        "bam",
+        "fra",
+        "eng",
+        "univ"
+      ]
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "source": {
+      "enum": [
+        "router",
+        "lexicon",
+        "classifier",
+        "context"
+      ]
+    }
+  }
+}
