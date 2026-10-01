@@ -1,3 +1,5 @@
+<p><img src="https://ai.crommixmali.com/assets/brand/logo.png" alt="cmx" height="56"></p>
+
 # @crommix/lid (JavaScript / TypeScript)
 
 Word-level language identification for Bambara with French and English

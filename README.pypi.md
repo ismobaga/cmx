@@ -1,3 +1,5 @@
+<p><img src="https://ai.crommixmali.com/assets/brand/logo.png" alt="cmx" height="56"></p>
+
 # cmx-lid
 
 Word-level language identification for **Bambara** text with **French** and

@@ -62,10 +62,7 @@ main { flex: 1; padding: 28px 0 56px; }
 .site-header { border-bottom: 1px solid var(--border); background: var(--surface); }
 .site-header .wrap { display: flex; align-items: center; gap: 16px; height: 60px; }
 .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: -0.01em; text-decoration: none; }
-.brand-mark {
-  width: 28px; height: 28px; border-radius: 8px; background: var(--text); color: var(--bg);
-  display: grid; place-items: center; font-size: 13px; font-weight: 800;
-}
+.brand-logo { height: 26px; width: auto; display: block; color: var(--text); }
 .brand small { font-weight: 500; color: var(--text-2); }
 .header-nav { margin-left: auto; display: flex; align-items: center; gap: 12px; }
 .header-nav a.nav-link { font-size: 14px; color: var(--text-2); text-decoration: none; }
