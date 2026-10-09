@@ -10,7 +10,7 @@ readme = "README.pypi.md"
 requires-python = ">=3.10"
 dependencies = []
 license = "Apache-2.0 AND CC-BY-SA-4.0"
-license-files = ["LICENSE", "LICENSE-MODEL.txt", "NOTICE"]
+license-files = ["LICENSE", "NOTICE"]
 authors = [{ name = "Crommix Mali S.A." }]
 keywords = ["bambara", "bamanankan", "language-identification", "code-switching", "mali", "nlp", "on-device"]
 classifiers = [

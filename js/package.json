@@ -19,7 +19,6 @@
     "model/cmx-lid.json",
     "README.md",
     "LICENSE",
-    "LICENSE-MODEL.txt",
     "NOTICE"
   ],
   "sideEffects": false,

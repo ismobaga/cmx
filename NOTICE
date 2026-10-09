@@ -6,7 +6,8 @@ LICENSING
   site site/, deploy/ and tests/) is licensed under the Apache License 2.0
   (see LICENSE).
 - The trained model and linguistic data files are licensed under Creative
-  Commons Attribution-ShareAlike 4.0 International,
+  Commons Attribution-ShareAlike 4.0 International
+  (https://creativecommons.org/licenses/by-sa/4.0/legalcode),
   because they are derived from CC BY-SA 4.0 sources listed below:
     cmx_lid/resources/*.json, cmx_lid/resources/*.tsv
     js/model/cmx-lid.json
